@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="GPT Engineers — Our Team. Structural engineering consultancy and project management across Papua New Guinea.">
+<title>Our Team | GPT Engineers</title>
+<style>
+:root{
+  --ink:#111827;
+  --muted:#667085;
+  --paper:#f5f7f8;
+  --white:#fff;
+  --line:rgba(17,24,39,.10);
+  --navy:#0d1b2a;
+  --blue:#176b87;
+  --cyan:#62b7cf;
+  --gold:#b0ad62;
+  --shadow:0 22px 60px rgba(13,27,42,.10);
+  --radius:24px;
+  --max:1240px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:var(--ink);background:var(--paper);line-height:1.6;
+}
+body.menu-open{overflow:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+img{max-width:100%}
+.skip{position:absolute;left:-9999px;top:auto}
+.skip:focus{left:20px;top:20px;background:#fff;padding:12px 16px;border-radius:10px;z-index:10000}
+.container{width:min(calc(100% - 40px),var(--max));margin:auto}
+.header{
+  position:fixed;inset:0 0 auto;z-index:1000;transition:.35s ease;
+  background:rgba(13,27,42,.34);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.12)
+}
+.header.scrolled{background:rgba(13,27,42,.94);box-shadow:0 12px 30px rgba(0,0,0,.14)}
+.nav{height:84px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.brand{display:flex;align-items:center;gap:13px;min-width:0}
+.brand img{width:58px;height:58px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,.7);box-shadow:0 8px 20px rgba(0,0,0,.18)}
+.brand-name{font-size:22px;font-weight:800;letter-spacing:.02em;color:#fff;white-space:nowrap}
+.nav-links{display:flex;align-items:center;gap:7px}
+.nav-links a{
+  color:rgba(255,255,255,.88);font-size:14px;font-weight:700;padding:11px 13px;border-radius:10px;
+  transition:.25s ease
+}
+.nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,.11)}
+.nav-cta{border:1px solid rgba(255,255,255,.35)!important;background:#fff!important;color:var(--navy)!important;margin-left:8px}
+.menu-toggle{display:none;background:transparent;border:0;color:#fff;width:48px;height:48px;border-radius:12px;cursor:pointer}
+.menu-toggle span{display:block;width:23px;height:2px;background:#fff;margin:5px auto;transition:.25s}
+.hero{
+  min-height:620px;display:grid;place-items:center;position:relative;overflow:hidden;
+  background:
+    linear-gradient(120deg, rgba(8,19,31,.74), rgba(18,61,76,.68)),
+    url("Team.jpg") center/cover no-repeat,
+    radial-gradient(circle at 78% 25%,rgba(98,183,207,.24),transparent 28%),
+    radial-gradient(circle at 15% 70%,rgba(176,173,98,.16),transparent 30%),
+    linear-gradient(120deg,#08131f 0%,#102b3b 56%,#123d4c 100%);
+}
+.hero::before{
+  content:"";position:absolute;inset:0;opacity:.18;
+  background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);
+  background-size:44px 44px;mask-image:linear-gradient(to bottom,#000,transparent);
+}
+.hero-content{position:relative;z-index:1;width:min(calc(100% - 40px),var(--max));padding:150px 0 80px;color:#fff}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.18em;font-weight:800;color:#b9dce7;text-transform:uppercase}
+.kicker::before{content:"";width:34px;height:2px;background:var(--cyan)}
+.hero h1{font-size:clamp(3.1rem,7vw,6.8rem);line-height:.93;letter-spacing:-.055em;max-width:900px;margin:18px 0 28px}
+.hero p{font-size:clamp(1rem,1.6vw,1.22rem);max-width:740px;color:rgba(255,255,255,.77);margin:0}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 19px;border-radius:12px;font-weight:800;font-size:14px;border:1px solid transparent;transition:.25s ease;cursor:pointer}
+.btn-primary{background:#fff;color:var(--navy)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.18)}
+.btn-outline{color:#fff;border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.05)}
+.btn-outline:hover{background:rgba(255,255,255,.12)}
+.section{padding:96px 0}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:44px}
+.section-head .label{font-size:12px;letter-spacing:.18em;font-weight:900;color:var(--blue)}
+.section-head h2{font-size:clamp(2.2rem,4vw,4rem);line-height:1;letter-spacing:-.04em;margin:10px 0 0}
+.section-head p{max-width:560px;color:var(--muted);margin:0}
+.intro{display:grid;grid-template-columns:1fr 1.4fr;gap:30px;margin-bottom:52px}
+.intro-card{background:var(--navy);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:30px;box-shadow:0 12px 40px rgba(13,27,42,.12)}
+.intro-card strong{display:block;font-size:1.5rem;line-height:1.2;margin-bottom:14px;color:#fff}
+.intro-card p{color:rgba(255,255,255,.8);margin:0}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.team-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  box-shadow:0 10px 34px rgba(13,27,42,.055);transition:.35s ease;outline:none
+}
+.team-card:hover,.team-card:focus-visible{transform:translateY(-8px);box-shadow:var(--shadow);border-color:rgba(23,107,135,.24)}
+.card-image-wrap{
+  position:relative;aspect-ratio:1.08/1;background:linear-gradient(135deg,#dfe9ec,#f7f8f8);overflow:hidden;
+  display:flex;align-items:center;justify-content:center;transition:transform .55s ease, box-shadow .45s ease, opacity .55s ease;
+  opacity:1;transform:none;z-index:0
+}
+.card-image-wrap img{
+  width:100%;height:100%;object-fit:contain;object-position:center;display:block;
+  transition:transform .45s ease, filter .45s ease, opacity .35s ease;background:#eef5f7;opacity:1;position:relative;z-index:0
+}
+.team-card.reveal.visible .card-image-wrap{opacity:1;transform:none}
+.team-card:hover .card-image-wrap,.team-card:focus-visible .card-image-wrap{transform:scale(1.01)}
+.team-card:hover img,.team-card:focus-visible img{transform:scale(1.03);filter:saturate(1.04)}
+.image-fallback-mark{
+  display:none;position:absolute;inset:0;place-items:center;font-size:6rem;font-weight:900;
+  color:rgba(20,64,80,.38);background:linear-gradient(180deg, rgba(255,255,255,.1), rgba(129,159,170,.05));
+  transition:opacity .35s ease;pointer-events:none;z-index:1
+}
+.image-fallback .image-fallback-mark{display:grid}
+.card-body{padding:25px 25px 24px}
+.eyebrow{font-size:10px;font-weight:900;letter-spacing:.16em;color:var(--gold);margin-bottom:8px}
+.card-body h3{margin:0;font-size:1.35rem;line-height:1.2;letter-spacing:-.02em}
+.role{font-weight:800;color:var(--blue);margin:9px 0 3px}
+.secondary{color:var(--muted);margin:0;min-height:50px;font-size:.95rem}
+.cta{
+  padding:70px 0;background:linear-gradient(120deg,#0b1a28,#123d4c);color:#fff;position:relative;overflow:hidden
+}
+.cta::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;right:-150px;top:-170px;background:rgba(98,183,207,.12)}
+.cta-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.cta h2{margin:0 0 10px;font-size:clamp(2rem,4vw,3.5rem);line-height:1;letter-spacing:-.04em}
+.cta p{margin:0;color:rgba(255,255,255,.7);max-width:650px}
+.footer{background:#07111b;color:#fff;padding:60px 0 26px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1.2fr;gap:50px}
+.footer h3,.footer h4{margin:0 0 16px}
+.footer h3{font-size:1.45rem}
+.footer p,.footer li,.footer a{color:rgba(255,255,255,.62);font-size:14px}
+.footer ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.footer a:hover{color:#fff}
+.footer-bottom{margin-top:44px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:1000px){
+  .nav-links{position:fixed;top:84px;left:20px;right:20px;display:grid;gap:4px;padding:12px;background:rgba(13,27,42,.97);border:1px solid rgba(255,255,255,.12);border-radius:16px;box-shadow:0 20px 50px rgba(0,0,0,.3);transform:translateY(-15px);opacity:0;pointer-events:none;transition:.25s}
+  .nav-links.open{transform:none;opacity:1;pointer-events:auto}
+  .nav-links a{padding:14px}
+  .nav-cta{margin-left:0!important}
+  .menu-toggle{display:block}
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+  .intro{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:650px){
+  .container,.hero-content{width:min(calc(100% - 28px),var(--max))}
+  .nav{height:74px}
+  .brand img{width:48px;height:48px}
+  .brand-name{font-size:18px}
+  .nav-links{top:74px;left:14px;right:14px}
+  .hero{min-height:580px}
+  .hero-content{padding-top:130px}
+  .hero h1{font-size:3.25rem}
+  .section{padding:68px 0}
+  .section-head{display:block}
+  .section-head p{margin-top:18px}
+  .team-grid{grid-template-columns:1fr}
+  .card-image-wrap{aspect-ratio:1.15/1}
+  .cta-inner{display:block}
+  .cta .btn{margin-top:24px}
+  .footer-grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="header" id="header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="GPT Engineers home">
+      <img src="gpt-logo.jpg" alt="GPT Engineers logo">
+      <span class="brand-name">GPT Engineers</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a class="active" href="team.html" aria-current="page">Our Team</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact Us</a>
+      <a class="nav-cta" href="contact.html">Start a Project ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero">
+  <div class="hero-content">
+    <div class="kicker">Our Team</div>
+    <h1>People behind the engineering.</h1>
+    <p>Structural Engineering Consultacy and Project Management across various industrial sectors in Papua New Guinea.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#team">Meet the Core Team ↓</a>
+      <a class="btn btn-outline" href="contact.html">Start a Project ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="team">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="label">GPT ENGINEERS</div>
+        <h2>OUR CORE TEAM</h2>
+      </div>
+      <p> Structural Engineers and project managers delivering projects across Papua New Guinea </p>
+    </div>
+
+    <div class="intro">
+      <div class="intro-card reveal">
+        <strong>Integrated expertise. Direct accountability.</strong>
+        <p>GPT Engineers is your go-to for all structural engineering needs in Papua New Guinea.</p>
+      </div>
+      <div class="intro-card reveal">
+        <p> GPT Engineers operates as an independent consulting structural engineering firm, providing structural engineering services across various industries in Papua New Guinea.</p>
+      </div>
+    </div>
+
+    <div class="team-grid">
+      
+      <article class="team-card reveal" tabindex="0">
+        <div class="card-image-wrap">
+          <img src="./gavera-paul-toua.jpg" alt="Gavera Paul Toua" loading="lazy"
+               onerror="this.style.display='none'; this.parentElement.classList.add('image-fallback');">
+          <div class="image-fallback-mark" aria-hidden="true">G</div>
+        </div>
+        <div class="card-body">
+          <div class="eyebrow">GPT ENGINEERS</div>
+          <h3>Gavera Paul Toua</h3>
+          <p class="role">Registered Structural Engineer and Technical Manager</p>
+          <p class="secondary">Principal Structural Engineer</p>
+        </div>
+      </article>
+    
+      <article class="team-card reveal" tabindex="0">
+        <div class="card-image-wrap">
+          <img src="./loa-english.jpg" alt="Loa English" loading="lazy"
+               onerror="this.style.display='none'; this.parentElement.classList.add('image-fallback');">
+          <div class="image-fallback-mark" aria-hidden="true">L</div>
+        </div>
+        <div class="card-body">
+          <div class="eyebrow">GPT ENGINEERS</div>
+          <h3>Loa English</h3>
+          <p class="role">General Manager</p>
+          <p class="secondary">Finance Administration</p>
+        </div>
+      </article>
+    
+      <article class="team-card reveal" tabindex="0">
+        <div class="card-image-wrap">
+          <img src="./ara-vagi.jpg" alt="Ara Vagi" loading="lazy"
+               onerror="this.style.display='none'; this.parentElement.classList.add('image-fallback');">
+          <div class="image-fallback-mark" aria-hidden="true">A</div>
+        </div>
+        <div class="card-body">
+          <div class="eyebrow">GPT ENGINEERS</div>
+          <h3>Ara Vagi</h3>
+          <p class="role">Structural Design Manager</p>
+          <p class="secondary">Project Manager</p>
+        </div>
+      </article>
+    
+      <article class="team-card reveal" tabindex="0">
+        <div class="card-image-wrap">
+          <img src="./samatha-engligh.jpg" alt="Samantha English" loading="lazy"
+               onerror="this.style.display='none'; this.parentElement.classList.add('image-fallback');">
+          <div class="image-fallback-mark" aria-hidden="true">S</div>
+        </div>
+        <div class="card-body">
+          <div class="eyebrow">GPT ENGINEERS</div>
+          <h3>Samantha English</h3>
+          <p class="role">Document Controller</p>
+          <p class="secondary">Office Administration</p>
+        </div>
+      </article>
+    
+      <article class="team-card reveal" tabindex="0">
+        <div class="card-image-wrap">
+          <img src="./christopher-samal.jpg" alt="Christopher Samal" loading="lazy"
+               onerror="this.style.display='none'; this.parentElement.classList.add('image-fallback');">
+          <div class="image-fallback-mark" aria-hidden="true">C</div>
+        </div>
+        <div class="card-body">
+          <div class="eyebrow">GPT ENGINEERS</div>
+          <h3>Christopher Samal</h3>
+          <p class="role">Structural Design Lead</p>
+          <p class="secondary">Construction Site Engineer.</p>
+        </div>
+      </article>
+    
+      <article class="team-card reveal" tabindex="0">
+        <div class="card-image-wrap">
+          <img src="./raymond-sega.jpg" alt="Raymond Sega" loading="lazy"
+               onerror="this.style.display='none'; this.parentElement.classList.add('image-fallback');">
+          <div class="image-fallback-mark" aria-hidden="true">R</div>
+        </div>
+        <div class="card-body">
+          <div class="eyebrow">GPT ENGINEERS</div>
+          <h3>Raymond Sega</h3>
+          <p class="role">Structural CAD Designer</p>
+          <p class="secondary">Construction Site Engineer</p>
+        </div>
+      </article>
+    
+      <article class="team-card reveal" tabindex="0">
+        <div class="card-image-wrap">
+          <img src="./samuel-steven.jpg" alt="Samuel Steven" loading="lazy"
+               onerror="this.style.display='none'; this.parentElement.classList.add('image-fallback');">
+          <div class="image-fallback-mark" aria-hidden="true">S</div>
+        </div>
+        <div class="card-body">
+          <div class="eyebrow">GPT ENGINEERS</div>
+          <h3>Samuel Steven</h3>
+          <p class="role">Geotech Technician</p>
+          <p class="secondary">Structural CAD Designer</p>
+        </div>
+      </article>
+    
+      <article class="team-card reveal" tabindex="0">
+        <div class="card-image-wrap">
+          <img src="./jeremiah-tanda.jpg" alt="Jeremiah Tanda" loading="lazy"
+               onerror="this.style.display='none'; this.parentElement.classList.add('image-fallback');">
+          <div class="image-fallback-mark" aria-hidden="true">J</div>
+        </div>
+        <div class="card-body">
+          <div class="eyebrow">GPT ENGINEERS</div>
+          <h3>Jeremiah Tanda</h3>
+          <p class="role">Structural Engineer</p>
+          <p class="secondary">Construction Site Engineer</p>
+        </div>
+      </article>
+    
+      <article class="team-card reveal" tabindex="0">
+        <div class="card-image-wrap">
+          <img src="./emmanuel-oroto.jpg" alt="Emmanuel Oroto" loading="lazy"
+               onerror="this.style.display='none'; this.parentElement.classList.add('image-fallback');">
+          <div class="image-fallback-mark" aria-hidden="true">E</div>
+        </div>
+        <div class="card-body">
+          <div class="eyebrow">GPT ENGINEERS</div>
+          <h3>Emmanuel Oroto</h3>
+          <p class="role">Structural Engineer</p>
+          <p class="secondary">Construction Site Engineer</p>
+        </div>
+      </article>
+    
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container cta-inner">
+    <div>
+      <h2>READY TO BUILD SOMETHING THAT BELONGS?</h2>
+      <p>Share your scope, timeline, and requirements. Our team responds within 2 business days.</p>
+    </div>
+    <a class="btn btn-primary" href="contact.html">Submit Project Brief ↗</a>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+         <a class="brand" href="index.html"><img src="gpt-logo.jpg" alt="GPT Engineers logo"><span class="brand-name">GPT Engineers</span></a>
+      <p>GPT Engineers was founded with a vision to deliver structural engineering solutions within PNG.</p>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+675+675 7137 4813">+675 7137 4813</a></li>
+        <li><a href="mailto:gavera.toua@gpt-engineers.com">gavera.toua@gpt-engineers.com</a></li>
+        <li>P.O. Box 1577, Vision City, Waigani, NCD, Papua New Guinea</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span> © <span id="year"></span>  GPT Engineers. All rights reserved</span> 
+    <span>Structural Engineering • Project Management • Papua New Guinea</span>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const header = document.getElementById('header');
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 24);
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  menuToggle.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    document.body.classList.toggle('menu-open', open);
+    menuToggle.setAttribute('aria-expanded', String(open));
+    menuToggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    document.body.classList.remove('menu-open');
+    menuToggle.setAttribute('aria-expanded','false');
+  }));
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('visible'); });
+  }, {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

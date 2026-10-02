@@ -1,0 +1,3091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT Engineers - Project Brief Form</title>
+    <style>
+        :root {
+            --primary-color: #8B1E22;
+            --secondary-color: #333333;
+            --light-bg: #f8f9fa;
+            --border-color: #cccccc;
+            --accent-color: #e9ecef;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            color: var(--secondary-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-placeholder {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .company-title h1 {
+            font-size: 24px;
+            color: var(--secondary-color);
+            letter-spacing: 1px;
+        }
+
+        .company-title p {
+            font-size: 11px;
+            color: #666;
+            text-transform: uppercase;
+        }
+
+        .contact-info {
+            text-align: right;
+            font-size: 13px;
+            color: #555;
+        }
+
+        .form-title {
+            text-align: center;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        section {
+            margin-bottom: 35px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        h2 {
+            font-size: 16px;
+            color: white;
+            background-color: var(--secondary-color);
+            padding: 8px 15px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        h3 {
+            font-size: 14px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"],
+        input[type="number"], input[type="date"], textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .option-label {
+            display: flex;
+            align-items: center;
+            background: var(--light-bg);
+            padding: 10px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            border: 1px solid #e9ecef;
+        }
+
+        .option-label input { margin-right: 10px; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0 20px;
+        }
+
+        th, td { border: 1px solid var(--border-color); padding: 10px; text-align: left; }
+        th { background-color: var(--accent-color); }
+
+        .submit-area { text-align: center; margin-top: 20px; }
+        .btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 14px 40px;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; text-align: center; gap: 15px; }
+            .contact-info { text-align: center; }
+            .grid-2, .grid-3 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- =========================================================
+     GPT CONSULTING STRUCTURAL ENGINEERS & PROJECT MANAGERS
+     CLIENT SERVICE REQUEST & PROJECT BRIEF FORM
+
+     SELF-CONTAINED VERSION
+     HTML + CSS + JAVASCRIPT
+     Paste this entire block inside your existing <body>
+========================================================= -->
+
+<div id="gpt-client-form">
+
+<style>
+/* =========================================================
+   FORM STYLES
+========================================================= */
+
+#gpt-client-form {
+    --primary: #17365d;
+    --primary-light: #eef4fa;
+    --border: #cfd6df;
+    --text: #222;
+    --muted: #666;
+    --white: #fff;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: #f4f6f8;
+    padding: 30px 15px;
+    box-sizing: border-box;
+}
+
+#gpt-client-form *,
+#gpt-client-form *::before,
+#gpt-client-form *::after {
+    box-sizing: border-box;
+}
+
+.gpt-form-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 35px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.gpt-header {
+    text-align: left;
+    border-bottom: 3px solid var(--primary);
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+.gpt-header-brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.gpt-header-logo {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(23, 54, 93, 0.15);
+    flex-shrink: 0;
+}
+
+.gpt-header-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gpt-header h1 {
+    margin: 0 0 8px;
+    color: var(--primary);
+    font-size: 26px;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.gpt-header h2 {
+    margin: 0 0 12px;
+    font-size: 20px;
+    color: #333;
+}
+
+.gpt-header p {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+.gpt-header .contact-info {
+    margin-top: 15px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.gpt-section {
+    margin-top: 28px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.gpt-section-title {
+    background: var(--primary);
+    color: #fff;
+    padding: 12px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.gpt-section-content {
+    padding: 20px;
+}
+
+.gpt-subtitle {
+    color: var(--primary);
+    font-size: 15px;
+    font-weight: bold;
+    margin: 20px 0 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 6px;
+}
+
+.gpt-subtitle:first-child {
+    margin-top: 0;
+}
+
+.gpt-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.gpt-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.gpt-field {
+    margin-bottom: 14px;
+}
+
+.gpt-field.full {
+    grid-column: 1 / -1;
+}
+
+.gpt-field label {
+    display: block;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.gpt-field input[type="text"],
+.gpt-field input[type="email"],
+.gpt-field input[type="tel"],
+.gpt-field input[type="date"],
+.gpt-field input[type="number"],
+.gpt-field textarea,
+.gpt-field select {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 14px;
+    background: #fff;
+}
+
+.gpt-field textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.gpt-field input:focus,
+.gpt-field textarea:focus,
+.gpt-field select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(23,54,93,0.1);
+}
+
+.gpt-checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 20px;
+}
+
+.gpt-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.gpt-checkbox input {
+    margin-top: 2px;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.gpt-inline-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.gpt-inline-options label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13px;
+}
+
+.gpt-inline-options input {
+    width: 16px;
+    height: 16px;
+}
+
+.gpt-other {
+    margin-top: 10px;
+}
+
+.gpt-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.gpt-table th,
+.gpt-table td {
+    border: 1px solid var(--border);
+    padding: 9px;
+    font-size: 13px;
+    text-align: left;
+}
+
+.gpt-table th {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+.gpt-table input {
+    width: 18px;
+    height: 18px;
+}
+
+.gpt-signature-box {
+    border: 1px solid var(--border);
+    padding: 15px;
+    min-height: 100px;
+    background: #fafafa;
+}
+
+.gpt-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 30px auto;
+    max-width: 1000px;
+}
+
+.gpt-btn {
+    border: none;
+    border-radius: 5px;
+    padding: 12px 22px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.gpt-btn-primary {
+    background: var(--primary);
+    color: #fff;
+}
+
+.gpt-btn-secondary {
+    background: #777;
+    color: #fff;
+}
+
+.gpt-btn:hover {
+    opacity: 0.9;
+}
+
+.gpt-required {
+    color: #c00;
+}
+
+.gpt-note {
+    background: var(--primary-light);
+    border-left: 4px solid var(--primary);
+    padding: 12px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.gpt-success-message {
+    display: none;
+    margin: 20px 0;
+    padding: 16px 20px;
+    border: 1px solid #a8d8b5;
+    border-left: 5px solid #218838;
+    border-radius: 6px;
+    background: #eaf7ee;
+    color: #1e6532;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(33, 136, 56, 0.12);
+}
+
+.gpt-footer {
+    text-align: center;
+    border-top: 1px solid #ddd;
+    margin-top: 30px;
+    padding-top: 15px;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    #gpt-client-form {
+        padding: 10px;
+    }
+
+    .gpt-form-container {
+        padding: 18px;
+    }
+
+    .gpt-grid,
+    .gpt-grid-3,
+    .gpt-checkbox-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gpt-header h1 {
+        font-size: 20px;
+    }
+
+    .gpt-header h2 {
+        font-size: 17px;
+    }
+
+    .gpt-section-content {
+        padding: 15px;
+    }
+
+    .gpt-actions {
+        flex-direction: column;
+    }
+
+    .gpt-btn {
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   PRINT / SAVE AS PDF
+========================================================= */
+
+@media print {
+
+    body {
+        background: #fff !important;
+    }
+
+    #gpt-client-form {
+        background: #fff !important;
+        padding: 0 !important;
+    }
+
+    .gpt-form-container {
+        box-shadow: none !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .gpt-actions {
+        display: none !important;
+    }
+
+    .gpt-section {
+        break-inside: avoid;
+    }
+
+    .gpt-section-title {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .gpt-header {
+        break-inside: avoid;
+    }
+
+    input,
+    textarea,
+    select {
+        border: 1px solid #999 !important;
+    }
+}
+</style>
+
+
+<div class="gpt-form-container">
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <div class="gpt-header">
+
+        <div class="gpt-header-brand">
+            <img src="gpt-logo.jpg" alt="GPT Engineers Logo" class="gpt-header-logo">
+            <div class="gpt-header-title">
+                <h1>GPT Consulting Structural Engineers &amp; Project Managers</h1>
+            </div>
+        </div>
+
+        <h2>CLIENT SERVICE REQUEST &amp; PROJECT BRIEF FORM</h2>
+
+        <p>
+            Please complete this form to help us understand your
+            project requirements and the services you require.
+        </p>
+
+        <div class="contact-info">
+            <strong>Email:</strong> gavera.toua@gpt-engineers.com <br>
+            <strong>Contact:</strong> +675 75301845 / +675 71374813<br>
+            <strong>P.O. BOX:</strong> 1577<br>
+            <strong>Location:</strong> VISION CITY WAIGANI, NCD, PAPUA NEW GUINEA
+        </div>
+
+    </div>
+
+
+    <form 
+    id="clientProjectForm"
+    action="https://api.web3forms.com/submit"
+    method="POST">
+
+<!-- =====================================================
+     WEB3FORMS CONFIGURATION
+     Replace ONLY the value below with your Web3Forms key
+====================================================== -->
+
+<input 
+    type="hidden" 
+    name="access_key" 
+    value="6c7d1b18-0e3b-439e-b6d9-63eb095e095a"
+>
+
+<input 
+    type="hidden" 
+    name="subject" 
+    value="GPT Engineers - New Client Service Request & Project Brief"
+>
+
+<input 
+    type="hidden" 
+    name="from_name" 
+    value="GPT Consulting Structural Engineers & Project Managers"
+>
+
+<!-- Recommended Web3Forms spam protection -->
+<input 
+    type="checkbox" 
+    name="botcheck" 
+    style="display:none;"
+>
+        <!-- =====================================================
+             SECTION 1
+        ====================================================== -->
+
+        <div class="gpt-section">
+
+            <div class="gpt-section-title">
+                Section 1 — Client Details
+            </div>
+
+            <div class="gpt-section-content">
+
+                <div class="gpt-grid">
+
+                    <div class="gpt-field">
+                        <label>
+                            Client / Company Name:
+                            <span class="gpt-required">*</span>
+                        </label>
+                        <input
+                            type="text"
+                            name="client_name"
+                            required
+                        >
+                    </div>
+
+                    <div class="gpt-field">
+                        <label>Contact Person:</label>
+                        <input
+                            type="text"
+                            name="contact_person"
+                        >
+                    </div>
+
+                    <div class="gpt-field">
+                        <label>Position / Title:</label>
+                        <input
+                            type="text"
+                            name="position"
+                        >
+                    </div>
+
+                    <div class="gpt-field">
+                        <label>Phone:</label>
+                        <input
+                            type="tel"
+                            name="phone"
+                        >
+                    </div>
+
+                    <div class="gpt-field">
+                        <label>Email Address:</label>
+                        <input
+                            type="email"
+                            name="email"
+                            id="clientEmail"
+                            autocomplete="email"
+                            placeholder="name@example.com"
+                            required
+                        >
+                    </div>
+
+                    <div class="gpt-field">
+                        <label>Project / Organisation Name:</label>
+                        <input
+                            type="text"
+                            name="project_name"
+                        >
+                    </div>
+
+                    <div class="gpt-field full">
+                        <label>Project Address / Location:</label>
+                        <textarea
+                            name="project_location"
+                        ></textarea>
+                    </div>
+
+                </div>
+
+
+                <div class="gpt-field">
+
+                    <label>Preferred Method of Contact:</label>
+
+                    <div class="gpt-inline-options">
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="contact_method"
+                                value="Email"
+                            >
+                            Email
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="contact_method"
+                                value="Phone"
+                            >
+                            Phone
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="contact_method"
+                                value="Other"
+                            >
+                            Other
+                        </label>
+
+                    </div>
+
+                    <input
+                        class="gpt-other"
+                        type="text"
+                        name="contact_method_other"
+                        placeholder="If other, please specify"
+                    >
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             SECTION 2
+        ====================================================== -->
+
+        <div class="gpt-section">
+
+            <div class="gpt-section-title">
+                Section 2 — Project Information
+            </div>
+
+            <div class="gpt-section-content">
+
+                <div class="gpt-subtitle">
+                    2.1 What type of project is this?
+                </div>
+
+                <div class="gpt-checkbox-grid">
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="project_type[]" value="New Construction">
+                        New Construction
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="project_type[]" value="Renovation / Alteration">
+                        Renovation / Alteration
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="project_type[]" value="Extension / Addition">
+                        Extension / Addition
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="project_type[]" value="Refurbishment">
+                        Refurbishment
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="project_type[]" value="Structural Repair">
+                        Structural Repair
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="project_type[]" value="Structural Upgrade">
+                        Structural Upgrade
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="project_type[]" value="Existing Building Assessment">
+                        Existing Building Assessment
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="project_type[]" value="Other">
+                        Other
+                    </label>
+
+                </div>
+
+                <div class="gpt-field">
+                    <input
+                        type="text"
+                        name="project_type_other"
+                        placeholder="Other project type"
+                    >
+                </div>
+
+
+                <div class="gpt-subtitle">
+                    2.2 Building / Structure Type
+                </div>
+
+                <div class="gpt-checkbox-grid">
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="structure_type[]" value="Residential">
+                        Residential
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="structure_type[]" value="Commercial">
+                        Commercial
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="structure_type[]" value="Industrial">
+                        Industrial
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="structure_type[]" value="Institutional">
+                        Institutional
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="structure_type[]" value="School / Education">
+                        School / Education
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="structure_type[]" value="Government">
+                        Government
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="structure_type[]" value="Warehouse">
+                        Warehouse
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="structure_type[]" value="Office">
+                        Office
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="structure_type[]" value="Apartment / Multi-Residential">
+                        Apartment / Multi-Residential
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="structure_type[]" value="Other">
+                        Other
+                    </label>
+
+                </div>
+
+                <div class="gpt-field">
+                    <input
+                        type="text"
+                        name="structure_type_other"
+                        placeholder="Other building / structure type"
+                    >
+                </div>
+
+
+                <div class="gpt-subtitle">
+                    2.3 Briefly describe the project:
+                </div>
+
+                <div class="gpt-field">
+                    <textarea
+                        name="project_description"
+                        rows="5"
+                    ></textarea>
+                </div>
+
+
+                <div class="gpt-subtitle">
+                    2.4 Approximate project size
+                </div>
+
+                <div class="gpt-grid-3">
+
+                    <div class="gpt-field">
+                        <label>Building Area (m²):</label>
+                        <input
+                            type="number"
+                            name="building_area"
+                            min="0"
+                        >
+                    </div>
+
+                    <div class="gpt-field">
+                        <label>Number of Levels:</label>
+                        <input
+                            type="number"
+                            name="number_levels"
+                            min="0"
+                        >
+                    </div>
+
+                    <div class="gpt-field">
+                        <label>Approximate Building Dimensions:</label>
+                        <input
+                            type="text"
+                            name="building_dimensions"
+                            placeholder="e.g. 20 m × 30 m"
+                        >
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             SECTION 3
+        ====================================================== -->
+
+        <div class="gpt-section">
+
+            <div class="gpt-section-title">
+                Section 3 — Services Required
+            </div>
+
+            <div class="gpt-section-content">
+
+                <div class="gpt-subtitle">
+                    A. Structural Design &amp; Engineering
+                </div>
+
+                <p>
+                    Please select the services you require:
+                </p>
+
+                <div class="gpt-checkbox-grid">
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="design_services[]" value="Structural Concept Design">
+                        Structural Concept Design
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="design_services[]" value="Preliminary Structural Design">
+                        Preliminary Structural Design
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="design_services[]" value="Detailed Structural Design">
+                        Detailed Structural Design
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="design_services[]" value="Structural Analysis & Calculations">
+                        Structural Analysis &amp; Calculations
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="design_services[]" value="Structural Steel Design">
+                        Structural Steel Design
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="design_services[]" value="Reinforced Concrete Design">
+                        Reinforced Concrete Design
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="design_services[]" value="Masonry / Blockwork Design">
+                        Masonry / Blockwork Design
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="design_services[]" value="Timber Structural Design">
+                        Timber Structural Design
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="design_services[]" value="Foundation Design">
+                        Foundation Design
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="design_services[]" value="Footing Design">
+                        Footing Design
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="design_services[]" value="Beam & Column Design">
+                        Beam &amp; Column Design
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="design_services[]" value="Slab Design">
+                        Slab Design
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="design_services[]" value="Roof Structure Design">
+                        Roof Structure Design
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="design_services[]" value="Retaining Wall Design">
+                        Retaining Wall Design
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="design_services[]" value="Structural Alteration / Modification Design">
+                        Structural Alteration / Modification Design
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="design_services[]" value="Structural Upgrade / Strengthening">
+                        Structural Upgrade / Strengthening
+                    </label>
+
+                </div>
+
+                <div class="gpt-field">
+                    <input
+                        type="text"
+                        name="design_services_other"
+                        placeholder="Other structural design service"
+                    >
+                </div>
+
+
+                <div class="gpt-subtitle">
+                    Design Brief
+                </div>
+
+                <p>
+                    What structural elements require design?
+                </p>
+
+                <div class="gpt-checkbox-grid">
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="design_elements[]" value="Foundations">
+                        Foundations
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="design_elements[]" value="Columns">
+                        Columns
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="design_elements[]" value="Beams">
+                        Beams
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="design_elements[]" value="Slabs">
+                        Slabs
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="design_elements[]" value="Walls">
+                        Walls
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="design_elements[]" value="Roof Structure">
+                        Roof Structure
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="design_elements[]" value="Stairs">
+                        Stairs
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="design_elements[]" value="Retaining Walls">
+                        Retaining Walls
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="design_elements[]" value="Connections">
+                        Connections
+                    </label>
+
+                </div>
+
+                <div class="gpt-field">
+                    <input
+                        type="text"
+                        name="design_elements_other"
+                        placeholder="Other structural element"
+                    >
+                </div>
+
+
+                <div class="gpt-field">
+
+                    <label>
+                        Required design standard / specification, if known:
+                    </label>
+
+                    <textarea
+                        name="design_standard"
+                        rows="4"
+                        placeholder="e.g. AS 3600, AS 4100, AS/NZS 1170, Eurocode, etc."
+                    ></textarea>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             SECTION 4
+        ====================================================== -->
+
+        <div class="gpt-section">
+
+            <div class="gpt-section-title">
+                Section 4 — Structural Reports &amp; Assessments
+            </div>
+
+            <div class="gpt-section-content">
+
+                <p>
+                    Please select the type of report required:
+                </p>
+
+                <div class="gpt-checkbox-grid">
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="reports[]" value="Structural Inspection Report">
+                        Structural Inspection Report
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="reports[]" value="Structural Condition Assessment">
+                        Structural Condition Assessment
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="reports[]" value="Existing Building Assessment">
+                        Existing Building Assessment
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="reports[]" value="Structural Defect Investigation">
+                        Structural Defect Investigation
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="reports[]" value="Structural Damage Assessment">
+                        Structural Damage Assessment
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="reports[]" value="Structural Adequacy Report">
+                        Structural Adequacy Report
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="reports[]" value="Structural Certification / Statement">
+                        Structural Certification / Statement
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="reports[]" value="Dilapidation / Condition Report">
+                        Dilapidation / Condition Report
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="reports[]" value="Structural Assessment for Renovation / Extension">
+                        Structural Assessment for Renovation / Extension
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="reports[]" value="Structural Repair Recommendation">
+                        Structural Repair Recommendation
+                    </label>
+
+                </div>
+
+                <div class="gpt-field">
+                    <input
+                        type="text"
+                        name="reports_other"
+                        placeholder="Other report required"
+                    >
+                </div>
+
+
+                <div class="gpt-subtitle">
+                    Reason for the Report
+                </div>
+
+                <div class="gpt-field">
+
+                    <label>
+                        Please briefly describe why the report is required:
+                    </label>
+
+                    <textarea
+                        name="report_reason"
+                        rows="4"
+                    ></textarea>
+
+                </div>
+
+
+                <div class="gpt-subtitle">
+                    Existing Issues / Defects
+                </div>
+
+                <p>
+                    Are there known structural issues?
+                </p>
+
+                <div class="gpt-checkbox-grid">
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="defects[]" value="Cracking">
+                        Cracking
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="defects[]" value="Settlement">
+                        Settlement
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="defects[]" value="Water Damage">
+                        Water Damage
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="defects[]" value="Corrosion">
+                        Corrosion
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="defects[]" value="Structural Movement">
+                        Structural Movement
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="defects[]" value="Foundation Problems">
+                        Foundation Problems
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="defects[]" value="Beam / Column Deflection">
+                        Beam / Column Deflection
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="defects[]" value="Roof Problems">
+                        Roof Problems
+                    </label>
+
+                </div>
+
+                <div class="gpt-field">
+                    <input
+                        type="text"
+                        name="defects_other"
+                        placeholder="Other issue / defect"
+                    >
+                </div>
+
+
+                <div class="gpt-field">
+
+                    <label>Description:</label>
+
+                    <textarea
+                        name="defect_description"
+                        rows="5"
+                    ></textarea>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             SECTION 5
+        ====================================================== -->
+
+        <div class="gpt-section">
+
+            <div class="gpt-section-title">
+                Section 5 — Structural Drawing &amp; Documentation
+            </div>
+
+            <div class="gpt-section-content">
+
+                <p>
+                    Please select the documentation required:
+                </p>
+
+                <div class="gpt-checkbox-grid">
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="documentation[]" value="Structural Site Plan">
+                        Structural Site Plan
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="documentation[]" value="Foundation Plan">
+                        Foundation Plan
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="documentation[]" value="Structural Floor Plan">
+                        Structural Floor Plan
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="documentation[]" value="Roof Framing Plan">
+                        Roof Framing Plan
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="documentation[]" value="Structural Sections">
+                        Structural Sections
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="documentation[]" value="Structural Elevations">
+                        Structural Elevations
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="documentation[]" value="Beam Layout">
+                        Beam Layout
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="documentation[]" value="Column Layout">
+                        Column Layout
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="documentation[]" value="Footing Details">
+                        Footing Details
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="documentation[]" value="Reinforcement Details">
+                        Reinforcement Details
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="documentation[]" value="Steel Framing Details">
+                        Steel Framing Details
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="documentation[]" value="Connection Details">
+                        Connection Details
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="documentation[]" value="Structural General Notes">
+                        Structural General Notes
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="documentation[]" value="Construction Details">
+                        Construction Details
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="documentation[]" value="As-Designed Structural Drawings">
+                        As-Designed Structural Drawings
+                    </label>
+
+                </div>
+
+                <div class="gpt-field">
+                    <input
+                        type="text"
+                        name="documentation_other"
+                        placeholder="Other documentation required"
+                    >
+                </div>
+
+
+                <div class="gpt-subtitle">
+                    Required Drawing Format
+                </div>
+
+                <div class="gpt-inline-options">
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="drawing_format[]"
+                            value="PDF"
+                        >
+                        PDF
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="drawing_format[]"
+                            value="DWG"
+                        >
+                        DWG
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="drawing_format[]"
+                            value="Vectorworks"
+                        >
+                        Vectorworks
+                    </label>
+
+                </div>
+
+                <div class="gpt-field">
+                    <input
+                        type="text"
+                        name="drawing_format_other"
+                        placeholder="Other drawing format"
+                    >
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             SECTION 6
+        ====================================================== -->
+
+        <div class="gpt-section">
+
+            <div class="gpt-section-title">
+                Section 6 — Site Inspection &amp; Construction Services
+            </div>
+
+            <div class="gpt-section-content">
+
+                <p>
+                    Please identify any site services required:
+                </p>
+
+                <div class="gpt-checkbox-grid">
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="site_services[]" value="Initial Site Inspection">
+                        Initial Site Inspection
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="site_services[]" value="Existing Structure Inspection">
+                        Existing Structure Inspection
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="site_services[]" value="Structural Construction Inspection">
+                        Structural Construction Inspection
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="site_services[]" value="Foundation Inspection">
+                        Foundation Inspection
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="site_services[]" value="Reinforcement Inspection">
+                        Reinforcement Inspection
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="site_services[]" value="Structural Steel Inspection">
+                        Structural Steel Inspection
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="site_services[]" value="Concrete Pour Inspection">
+                        Concrete Pour Inspection
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="site_services[]" value="Defect Inspection">
+                        Defect Inspection
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="site_services[]" value="Progress Inspection">
+                        Progress Inspection
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="site_services[]" value="Final Inspection">
+                        Final Inspection
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="site_services[]" value="Site Measurement / Verification">
+                        Site Measurement / Verification
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="site_services[]" value="Construction Advice">
+                        Construction Advice
+                    </label>
+
+                </div>
+
+                <div class="gpt-field">
+                    <input
+                        type="text"
+                        name="site_services_other"
+                        placeholder="Other site service"
+                    >
+                </div>
+
+
+                <div class="gpt-grid">
+
+                    <div class="gpt-field">
+
+                        <label>
+                            Number of anticipated site visits:
+                        </label>
+
+                        <input
+                            type="text"
+                            name="site_visits"
+                        >
+
+                    </div>
+
+
+                    <div class="gpt-field">
+
+                        <label>
+                            Are there existing drawings available?
+                        </label>
+
+                        <div class="gpt-inline-options">
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="existing_drawings"
+                                    value="Yes"
+                                >
+                                Yes
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="existing_drawings"
+                                    value="No"
+                                >
+                                No
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="existing_drawings"
+                                    value="Unsure"
+                                >
+                                Unsure
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             SECTION 7
+        ====================================================== -->
+
+        <div class="gpt-section">
+
+            <div class="gpt-section-title">
+                Section 7 — Project Management Services
+            </div>
+
+            <div class="gpt-section-content">
+
+                <p>
+                    Please identify the project management services required:
+                </p>
+
+                <div class="gpt-checkbox-grid">
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="pm_services[]" value="Project Planning">
+                        Project Planning
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="pm_services[]" value="Project Coordination">
+                        Project Coordination
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="pm_services[]" value="Consultant Coordination">
+                        Consultant Coordination
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="pm_services[]" value="Structural / Architectural Coordination">
+                        Structural / Architectural Coordination
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="pm_services[]" value="Contractor Coordination">
+                        Contractor Coordination
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="pm_services[]" value="Programme / Schedule Monitoring">
+                        Programme / Schedule Monitoring
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="pm_services[]" value="Site Progress Monitoring">
+                        Site Progress Monitoring
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="pm_services[]" value="Quality Control / QA-QC">
+                        Quality Control / QA-QC
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="pm_services[]" value="Construction Monitoring">
+                        Construction Monitoring
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="pm_services[]" value="Cost / Scope Monitoring">
+                        Cost / Scope Monitoring
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="pm_services[]" value="Defect Management">
+                        Defect Management
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="pm_services[]" value="Documentation Control">
+                        Documentation Control
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="pm_services[]" value="Progress Reporting">
+                        Progress Reporting
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="pm_services[]" value="Meeting Coordination">
+                        Meeting Coordination
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="pm_services[]" value="Contractor Communication">
+                        Contractor Communication
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="pm_services[]" value="Project Close-Out">
+                        Project Close-Out
+                    </label>
+
+                </div>
+
+                <div class="gpt-field">
+                    <input
+                        type="text"
+                        name="pm_services_other"
+                        placeholder="Other project management service"
+                    >
+                </div>
+
+
+                <div class="gpt-subtitle">
+                    Project Management Requirement
+                </div>
+
+                <p>
+                    What level of involvement do you require?
+                </p>
+
+                <div class="gpt-checkbox-grid">
+
+                    <label class="gpt-checkbox">
+                        <input type="radio" name="pm_level" value="Advisory / As Required">
+                        Advisory / As Required
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="radio" name="pm_level" value="Part-Time Project Management">
+                        Part-Time Project Management
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="radio" name="pm_level" value="Regular Site / Project Management">
+                        Regular Site / Project Management
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="radio" name="pm_level" value="Full Project Management">
+                        Full Project Management
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="radio" name="pm_level" value="To Be Discussed">
+                        To Be Discussed
+                    </label>
+
+                </div>
+
+
+                <div class="gpt-grid">
+
+                    <div class="gpt-field">
+                        <label>Expected project duration:</label>
+                        <input
+                            type="text"
+                            name="project_duration"
+                        >
+                    </div>
+
+                    <div class="gpt-field">
+                        <label>Expected commencement date:</label>
+                        <input
+                            type="date"
+                            name="expected_start"
+                        >
+                    </div>
+
+                    <div class="gpt-field">
+                        <label>Target completion date:</label>
+                        <input
+                            type="date"
+                            name="target_completion"
+                        >
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             SECTION 8
+        ====================================================== -->
+
+        <div class="gpt-section">
+
+            <div class="gpt-section-title">
+                Section 8 — Information &amp; Documents Available
+            </div>
+
+            <div class="gpt-section-content">
+
+                <p>
+                    Please indicate which project information is currently available:
+                </p>
+
+                <div class="gpt-checkbox-grid">
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="available_docs[]" value="Architectural Drawings">
+                        Architectural Drawings
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="available_docs[]" value="Existing Structural Drawings">
+                        Existing Structural Drawings
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="available_docs[]" value="Civil Drawings">
+                        Civil Drawings
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="available_docs[]" value="Survey Plan">
+                        Survey Plan
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="available_docs[]" value="Site Plan">
+                        Site Plan
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="available_docs[]" value="Geotechnical Report">
+                        Geotechnical Report
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="available_docs[]" value="Soil Investigation Report">
+                        Soil Investigation Report
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="available_docs[]" value="DCP / Soil Test Results">
+                        DCP / Soil Test Results
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="available_docs[]" value="Existing Engineering Reports">
+                        Existing Engineering Reports
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="available_docs[]" value="Previous Structural Calculations">
+                        Previous Structural Calculations
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="available_docs[]" value="Construction Drawings">
+                        Construction Drawings
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="available_docs[]" value="Photographs">
+                        Photographs
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="available_docs[]" value="Building Approval Documents">
+                        Building Approval Documents
+                    </label>
+
+                </div>
+
+                <div class="gpt-field">
+                    <input
+                        type="text"
+                        name="available_docs_other"
+                        placeholder="Other information/document"
+                    >
+                </div>
+
+
+                <div class="gpt-subtitle">
+                    Documents Provided to Consultant
+                </div>
+
+                <table class="gpt-table">
+
+                    <thead>
+                        <tr>
+                            <th>Document</th>
+                            <th>Available</th>
+                            <th>Provided</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Architectural Drawings</td>
+                            <td><input type="checkbox" name="arch_available"></td>
+                            <td><input type="checkbox" name="arch_provided"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Structural Drawings</td>
+                            <td><input type="checkbox" name="struct_available"></td>
+                            <td><input type="checkbox" name="struct_provided"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Geotechnical Report</td>
+                            <td><input type="checkbox" name="geo_available"></td>
+                            <td><input type="checkbox" name="geo_provided"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Survey</td>
+                            <td><input type="checkbox" name="survey_available"></td>
+                            <td><input type="checkbox" name="survey_provided"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Existing Reports</td>
+                            <td><input type="checkbox" name="reports_available"></td>
+                            <td><input type="checkbox" name="reports_provided"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Site Photos</td>
+                            <td><input type="checkbox" name="photos_available"></td>
+                            <td><input type="checkbox" name="photos_provided"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Other</td>
+                            <td><input type="checkbox" name="other_available"></td>
+                            <td><input type="checkbox" name="other_provided"></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             SECTION 9
+        ====================================================== -->
+
+        <div class="gpt-section">
+
+            <div class="gpt-section-title">
+                Section 9 — Design &amp; Project Requirements
+            </div>
+
+            <div class="gpt-section-content">
+
+                <div class="gpt-subtitle">
+                    9.1 What is the primary objective of engaging us?
+                </div>
+
+                <div class="gpt-checkbox-grid">
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="primary_objective[]" value="Obtain structural design">
+                        Obtain structural design
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="primary_objective[]" value="Obtain engineering documentation">
+                        Obtain engineering documentation
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="primary_objective[]" value="Obtain structural approval / certification">
+                        Obtain structural approval / certification
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="primary_objective[]" value="Investigate an existing structural problem">
+                        Investigate an existing structural problem
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="primary_objective[]" value="Prepare for construction">
+                        Prepare for construction
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="primary_objective[]" value="Resolve construction issues">
+                        Resolve construction issues
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="primary_objective[]" value="Manage the project">
+                        Manage the project
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="primary_objective[]" value="Improve / upgrade an existing structure">
+                        Improve / upgrade an existing structure
+                    </label>
+
+                </div>
+
+                <div class="gpt-field">
+                    <input
+                        type="text"
+                        name="primary_objective_other"
+                        placeholder="Other primary objective"
+                    >
+                </div>
+
+
+                <div class="gpt-field">
+
+                    <label>
+                        9.2 Are there any specific client requirements?
+                    </label>
+
+                    <textarea
+                        name="client_requirements"
+                        rows="4"
+                    ></textarea>
+
+                </div>
+
+
+                <div class="gpt-subtitle">
+                    9.3 Are there any budget constraints we should be aware of?
+                </div>
+
+                <div class="gpt-inline-options">
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="budget_constraints"
+                            value="Yes"
+                        >
+                        Yes
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="budget_constraints"
+                            value="No"
+                        >
+                        No
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="budget_constraints"
+                            value="To Be Discussed"
+                        >
+                        To Be Discussed
+                    </label>
+
+                </div>
+
+                <div class="gpt-field">
+
+                    <label>
+                        Approximate project budget, if applicable:
+                    </label>
+
+                    <div style="display:flex; gap:8px; align-items:center;">
+                        <strong>K</strong>
+                        <input
+                            type="text"
+                            name="project_budget"
+                            placeholder="Enter amount"
+                        >
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             SECTION 10
+        ====================================================== -->
+
+        <div class="gpt-section">
+
+            <div class="gpt-section-title">
+                Section 10 — Programme &amp; Priority
+            </div>
+
+            <div class="gpt-section-content">
+
+                <div class="gpt-field">
+
+                    <label>
+                        How urgent is the required service?
+                    </label>
+
+                    <div class="gpt-inline-options">
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="urgency"
+                                value="Normal"
+                            >
+                            Normal
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="urgency"
+                                value="High Priority"
+                            >
+                            High Priority
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="urgency"
+                                value="Urgent"
+                            >
+                            Urgent
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="urgency"
+                                value="Emergency"
+                            >
+                            Emergency
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="gpt-grid">
+
+                    <div class="gpt-field">
+                        <label>Required commencement date:</label>
+                        <input
+                            type="date"
+                            name="required_commencement"
+                        >
+                    </div>
+
+                    <div class="gpt-field">
+                        <label>Required completion date:</label>
+                        <input
+                            type="date"
+                            name="required_completion"
+                        >
+                    </div>
+
+                </div>
+
+
+                <div class="gpt-field">
+
+                    <label>
+                        Reason for deadline, if applicable:
+                    </label>
+
+                    <textarea
+                        name="deadline_reason"
+                        rows="4"
+                    ></textarea>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             SECTION 11
+        ====================================================== -->
+
+        <div class="gpt-section">
+
+            <div class="gpt-section-title">
+                Section 11 — Client Priorities
+            </div>
+
+            <div class="gpt-section-content">
+
+                <p>
+                    Please rank the following according to importance:
+                </p>
+
+                <table class="gpt-table">
+
+                    <thead>
+                        <tr>
+                            <th>Priority</th>
+                            <th>Requirement</th>
+                            <th>Rank / Importance</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td><input type="checkbox" name="priority_cost"></td>
+                            <td>Cost</td>
+                            <td>
+                                <select name="priority_cost_rank">
+                                    <option value="">Select</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox" name="priority_time"></td>
+                            <td>Programme / Time</td>
+                            <td>
+                                <select name="priority_time_rank">
+                                    <option value="">Select</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox" name="priority_quality"></td>
+                            <td>Design Quality</td>
+                            <td>
+                                <select name="priority_quality_rank">
+                                    <option value="">Select</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox" name="priority_efficiency"></td>
+                            <td>Construction Efficiency</td>
+                            <td>
+                                <select name="priority_efficiency_rank">
+                                    <option value="">Select</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox" name="priority_compliance"></td>
+                            <td>Compliance</td>
+                            <td>
+                                <select name="priority_compliance_rank">
+                                    <option value="">Select</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox" name="priority_documentation"></td>
+                            <td>Documentation</td>
+                            <td>
+                                <select name="priority_documentation_rank">
+                                    <option value="">Select</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox" name="priority_coordination"></td>
+                            <td>Project Coordination</td>
+                            <td>
+                                <select name="priority_coordination_rank">
+                                    <option value="">Select</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox" name="priority_performance"></td>
+                            <td>Long-Term Performance</td>
+                            <td>
+                                <select name="priority_performance_rank">
+                                    <option value="">Select</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+
+                <div class="gpt-field">
+
+                    <label>
+                        Additional comments:
+                    </label>
+
+                    <textarea
+                        name="priority_comments"
+                        rows="5"
+                    ></textarea>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             SECTION 12
+        ====================================================== -->
+
+        <div class="gpt-section">
+
+            <div class="gpt-section-title">
+                Section 12 — Additional Project Information
+            </div>
+
+            <div class="gpt-section-content">
+
+                <div class="gpt-field">
+
+                    <label>
+                        Please provide any other information that may assist us
+                        in understanding your requirements.
+                    </label>
+
+                    <textarea
+                        name="additional_information"
+                        rows="8"
+                    ></textarea>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             SECTION 13
+        ====================================================== -->
+
+        <div class="gpt-section">
+
+            <div class="gpt-section-title">
+                Section 13 — Client Confirmation
+            </div>
+
+            <div class="gpt-section-content">
+
+                <div class="gpt-note">
+
+                    I/We confirm that the information provided in this
+                    Client Service Request &amp; Project Brief Form is,
+                    to the best of our knowledge, accurate and complete.
+
+                    <br><br>
+
+                    I/We understand that additional information may be
+                    requested before the scope of services and professional
+                    fee can be confirmed.
+
+                </div>
+
+
+                <div class="gpt-grid">
+
+                    <div class="gpt-field">
+                        <label>Client Name:</label>
+                        <input
+                            type="text"
+                            name="confirmation_client_name"
+                        >
+                    </div>
+
+                    <div class="gpt-field">
+                        <label>Position:</label>
+                        <input
+                            type="text"
+                            name="confirmation_position"
+                        >
+                    </div>
+
+                    <div class="gpt-field">
+                        <label>Signature:</label>
+
+                        <div class="gpt-signature-box">
+
+                            <input
+                                type="text"
+                                name="signature"
+                                placeholder="Type name / electronic signature"
+                            >
+
+                        </div>
+
+                    </div>
+
+                    <div class="gpt-field">
+
+                        <label>Date:</label>
+
+                        <input
+                            type="date"
+                            name="confirmation_date"
+                            id="confirmationDate"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             CONSULTANT USE ONLY
+        ====================================================== -->
+
+        <div class="gpt-section">
+
+            <div class="gpt-section-title">
+                Consultant Use Only
+            </div>
+
+            <div class="gpt-section-content">
+
+                <div class="gpt-grid">
+
+                    <div class="gpt-field">
+                        <label>Project Reference No.:</label>
+                        <input
+                            type="text"
+                            name="project_reference"
+                        >
+                    </div>
+
+                    <div class="gpt-field">
+                        <label>Date Received:</label>
+                        <input
+                            type="date"
+                            name="date_received"
+                            id="dateReceived"
+                        >
+                    </div>
+
+                </div>
+
+
+                <div class="gpt-subtitle">
+                    Preliminary Scope Identified
+                </div>
+
+                <div class="gpt-checkbox-grid">
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="preliminary_scope[]" value="Structural Design">
+                        Structural Design
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="preliminary_scope[]" value="Structural Engineering Report">
+                        Structural Engineering Report
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="preliminary_scope[]" value="Structural Assessment">
+                        Structural Assessment
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="preliminary_scope[]" value="Structural Documentation">
+                        Structural Documentation
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="preliminary_scope[]" value="Site Inspection">
+                        Site Inspection
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="preliminary_scope[]" value="Construction Support">
+                        Construction Support
+                    </label>
+
+                    <label class="gpt-checkbox">
+                        <input type="checkbox" name="preliminary_scope[]" value="Project Management">
+                        Project Management
+                    </label>
+
+                </div>
+
+                <div class="gpt-field">
+                    <input
+                        type="text"
+                        name="preliminary_scope_other"
+                        placeholder="Other preliminary scope"
+                    >
+                </div>
+
+
+                <div class="gpt-field">
+
+                    <label>
+                        Additional Information Required:
+                    </label>
+
+                    <textarea
+                        name="additional_info_required"
+                        rows="5"
+                    ></textarea>
+
+                </div>
+
+
+                <div class="gpt-subtitle">
+                    Review Requirements
+                </div>
+
+                <div class="gpt-grid">
+
+                    <div class="gpt-field">
+
+                        <label>
+                            Site Inspection Required:
+                        </label>
+
+                        <div class="gpt-inline-options">
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="site_inspection_required"
+                                    value="Yes"
+                                >
+                                Yes
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="site_inspection_required"
+                                    value="No"
+                                >
+                                No
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="gpt-field">
+
+                        <label>
+                            Design / Engineering Review Required:
+                        </label>
+
+                        <div class="gpt-inline-options">
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="engineering_review"
+                                    value="Yes"
+                                >
+                                Yes
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="engineering_review"
+                                    value="No"
+                                >
+                                No
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="gpt-field">
+
+                        <label>
+                            Quotation / Fee Proposal Required:
+                        </label>
+
+                        <div class="gpt-inline-options">
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="quotation_required"
+                                    value="Yes"
+                                >
+                                Yes
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="quotation_required"
+                                    value="No"
+                                >
+                                No
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="gpt-subtitle">
+                    Estimated Level of Effort
+                </div>
+
+                <div class="gpt-inline-options">
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="effort"
+                            value="Minor"
+                        >
+                        Minor
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="effort"
+                            value="Standard"
+                        >
+                        Standard
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="effort"
+                            value="Complex"
+                        >
+                        Complex
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="effort"
+                            value="To Be Determined"
+                        >
+                        To Be Determined
+                    </label>
+
+                </div>
+
+
+                <div class="gpt-grid">
+
+                    <div class="gpt-field">
+
+                        <label>
+                            Prepared By:
+                        </label>
+
+                        <input
+                            type="text"
+                            name="prepared_by"
+                        >
+
+                    </div>
+
+
+                    <div class="gpt-field">
+
+                        <label>
+                            Date:
+                        </label>
+
+                        <input
+                            type="date"
+                            name="prepared_date"
+                            id="preparedDate"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="gpt-field">
+
+                    <label>
+                        Proposed Fee / Quotation Reference:
+                    </label>
+
+                    <input
+                        type="text"
+                        name="quotation_reference"
+                    >
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             FORM BUTTONS
+        ====================================================== -->
+
+        <div class="gpt-actions">
+
+            <button
+                type="submit"
+                class="gpt-btn gpt-btn-primary"
+            >
+                Submit / Validate Form
+            </button>
+
+            <button
+                type="button"
+                class="gpt-btn gpt-btn-primary"
+                id="printForm"
+            >
+                Print / Save as PDF
+            </button>
+
+            <button
+                type="button"
+                class="gpt-btn gpt-btn-secondary"
+                id="clearForm"
+            >
+                Clear Form
+            </button>
+
+        </div>
+
+
+    </form>
+
+    <div class="gpt-success-message" id="successMessage" role="status" aria-live="polite">
+        Message sent successfully! Thank you for contacting GPT Engineers.
+    </div>
+
+    <div class="gpt-footer">
+
+        GPT Consulting Structural Engineers &amp; Project Managers<br>
+        Client Service Request &amp; Project Brief Form
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+(function () {
+
+    "use strict";
+
+
+    /* ---------------------------------------------------------
+       GET TODAY'S DATE
+    --------------------------------------------------------- */
+
+    function getToday() {
+
+        const today = new Date();
+
+        const year = today.getFullYear();
+
+        const month = String(
+            today.getMonth() + 1
+        ).padStart(2, "0");
+
+        const day = String(
+            today.getDate()
+        ).padStart(2, "0");
+
+        return year + "-" + month + "-" + day;
+
+    }
+
+
+    /* ---------------------------------------------------------
+       AUTOMATIC DATES
+    --------------------------------------------------------- */
+
+    const today = getToday();
+
+    const confirmationDate =
+        document.getElementById("confirmationDate");
+
+    const dateReceived =
+        document.getElementById("dateReceived");
+
+    const preparedDate =
+        document.getElementById("preparedDate");
+
+
+    if (confirmationDate) {
+        confirmationDate.value = today;
+    }
+
+    if (dateReceived) {
+        dateReceived.value = today;
+    }
+
+    if (preparedDate) {
+        preparedDate.value = today;
+    }
+
+
+    /* ---------------------------------------------------------
+       FORM SUBMISSION / VALIDATION
+    --------------------------------------------------------- */
+
+    const form =
+        document.getElementById("clientProjectForm");
+    const successMessage =
+        document.getElementById("successMessage");
+
+    /* ---------------------------------------------------------
+       WEB3FORMS SUBMISSION
+    --------------------------------------------------------- */
+
+    if (form) {
+
+        form.addEventListener("submit", async function (event) {
+
+            event.preventDefault();
+
+            /* Validate form */
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
+            /* Find submit button */
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton ? submitButton.textContent : "";
+
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.textContent = "Submitting...";
+            }
+
+            try {
+                const formData = new FormData(form);
+                const response = await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    form.reset();
+                    if (successMessage) {
+                        successMessage.style.display = "block";
+                        successMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+                    }
+
+                    if (confirmationDate) {
+                        confirmationDate.value = today;
+                    }
+
+                    if (dateReceived) {
+                        dateReceived.value = today;
+                    }
+
+                    if (preparedDate) {
+                        preparedDate.value = today;
+                    }
+                } else {
+                    alert(
+                        "The form could not be submitted. " +
+                        "Please check your information and try again.\n\n" +
+                        "Message: " +
+                        (result.message || "Unknown error")
+                    );
+                }
+            } catch (error) {
+                console.error("Web3Forms Error:", error);
+                alert(
+                    "There was a problem submitting the form. " +
+                    "Please check your internet connection and try again."
+                );
+            } finally {
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalButtonText;
+                }
+            }
+        });
+    }
+
+    /* ---------------------------------------------------------
+       PRINT / SAVE AS PDF
+    --------------------------------------------------------- */
+
+    const printButton = document.getElementById("printForm");
+
+    if (printButton) {
+        printButton.addEventListener("click", function () {
+            window.print();
+        });
+    }
+
+    /* ---------------------------------------------------------
+       CLEAR FORM
+    --------------------------------------------------------- */
+
+    const clearButton = document.getElementById("clearForm");
+
+    if (clearButton) {
+        clearButton.addEventListener("click", function () {
+            const confirmClear = confirm(
+                "Are you sure you want to clear all information entered into this form?"
+            );
+
+            if (!confirmClear) {
+                return;
+            }
+
+            form.reset();
+            if (successMessage) {
+                successMessage.style.display = "none";
+            }
+
+            if (confirmationDate) {
+                confirmationDate.value = today;
+            }
+
+            if (dateReceived) {
+                dateReceived.value = today;
+            }
+
+            if (preparedDate) {
+                preparedDate.value = today;
+            }
+        });
+    }
+
+    /* ---------------------------------------------------------
+       AUTOMATIC EMAIL VALIDATION
+    --------------------------------------------------------- */
+
+    const emailField = document.getElementById("clientEmail");
+
+    if (emailField) {
+        emailField.addEventListener("input", function () {
+            if (this.value && !this.checkValidity()) {
+                this.setCustomValidity("Please enter a valid email address.");
+            } else {
+                this.setCustomValidity("");
+            }
+        });
+    }
+})();
+</script>
+
+</div>
+
+<!-- =========================================================
+     END OF GPT CLIENT SERVICE REQUEST FORM
+=====
+
+
+<script>
+    document.getElementById('projectBriefForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+        const formObject = {};
+        formData.forEach((value, key) => { formObject[key] = value; });
+        console.log("Form Submitted:", formObject);
+        alert("Project Brief successfully logged in console!");
+    });
+</script>
+</body>
+</html>
+
+

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="About GPT Consulting Structural Engineers and Project Managers">
+<title>About Us | GPT Engineers</title>
+<style>
+:root{
+  --ink:#101820; --muted:#68727c; --paper:#f5f7f8; --white:#fff;
+  --accent:#d7a84a; --accent2:#f0c96c; --line:#dfe4e8;
+  --dark:#0a1117; --card:#ffffff; --shadow:0 18px 50px rgba(9,18,25,.10);
+  --radius:22px; --max:1180px;
+  --box-soft:#eef7ff; --box-soft-2:#f9f1dc; --box-soft-3:#eef9f1; --box-strong:#0f1d29;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{font:inherit}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+.skip{position:absolute;left:-9999px}.skip:focus{left:15px;top:15px;background:#fff;padding:10px 14px;z-index:9999}
+.site-header{
+ position:fixed;inset:0 0 auto 0;z-index:1000;background:rgba(10,17,23,.82);
+ backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.10);
+ transition:.3s ease;
+}
+.site-header.scrolled{background:rgba(10,17,23,.96);box-shadow:0 8px 30px rgba(0,0,0,.18)}
+.nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.brand{display:flex;align-items:center;gap:13px;color:#fff;flex-shrink:0}
+.brand img{width:54px;height:54px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,.35)}
+.brand strong{font-size:21px;letter-spacing:.03em}
+.nav-links{display:flex;align-items:center;gap:7px}
+.nav-links a{color:#e9edf0;padding:10px 13px;border-radius:10px;font-size:14px;font-weight:600;transition:.25s}
+.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.10);color:var(--accent2)}
+.nav-cta,.hero-cta{
+ display:inline-flex;align-items:center;justify-content:center;gap:10px;
+ background:var(--accent);color:#101820!important;font-weight:800;border-radius:999px;
+ padding:12px 19px;box-shadow:0 8px 22px rgba(215,168,74,.22);transition:.25s;
+}
+.nav-cta:hover,.hero-cta:hover{transform:translateY(-2px);background:var(--accent2)}
+.menu-btn{display:none;background:none;border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:10px;padding:9px 11px;cursor:pointer}
+.menu-btn span{display:block;width:23px;height:2px;background:#fff;margin:4px}
+.hero{
+ min-height:92vh;padding:150px 0 90px;
+ background:
+  linear-gradient(135deg,rgba(10,17,23,.88) 0%,rgba(19,33,44,.78) 62%,rgba(24,40,50,.86) 100%),
+  radial-gradient(circle at 82% 22%,rgba(215,168,74,.20),transparent 28%),
+  url('1821481-City-Architecture-Bridge-built-structure-sky-bridge.jpg') center/cover no-repeat;
+ color:#fff;position:relative;overflow:hidden;
+}
+.hero:after{content:"";position:absolute;width:480px;height:480px;border:1px solid rgba(255,255,255,.08);border-radius:50%;right:-150px;bottom:-220px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:70px;position:relative;z-index:1}
+.eyebrow{color:var(--accent2);font-weight:800;letter-spacing:.18em;font-size:12px;text-transform:uppercase}
+.hero h1{font-size:clamp(48px,7vw,92px);line-height:.96;margin:18px 0 24px;letter-spacing:-.045em}
+.hero h1 span{color:var(--accent)}
+.hero-lead{font-size:19px;max-width:700px;color:#d7dfe5}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.ghost-cta{display:inline-flex;padding:12px 19px;border:1px solid rgba(255,255,255,.28);border-radius:999px;color:#fff;font-weight:700;transition:.25s}
+.ghost-cta:hover{background:#fff;color:#101820}
+.hero-panel{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.07);backdrop-filter:blur(12px);border-radius:28px;padding:30px;box-shadow:0 25px 70px rgba(0,0,0,.22)}
+.hero-panel .number{font-size:58px;font-weight:800;line-height:1;color:var(--accent)}
+.hero-panel h3{margin:12px 0 8px;font-size:24px}.hero-panel p{color:#c6d0d7;margin:0}
+section{padding:100px 0}
+.section-head{max-width:760px;margin:0 auto 36px;text-align:center}
+.kicker{display:inline-block;margin-bottom:12px;font-size:12px;font-weight:800;letter-spacing:.18em;color:var(--accent);text-transform:uppercase}
+.section-head h2{font-size:clamp(32px,4vw,52px);line-height:1.08;margin:0 0 14px;letter-spacing:-.04em}
+.section-head p{margin:0;color:var(--muted);font-size:17px}
+.vision-box{margin-top:18px;padding:0 0 10px}
+.vision-box-inner{background:linear-gradient(135deg,#ecfdf5 0%,#f5fff7 42%,#eef7ff 100%);border:1px solid rgba(31,146,95,.24);border-radius:24px;padding:30px 28px;box-shadow:0 18px 42px rgba(17,53,39,.08)}
+.mini-label{display:inline-block;margin-bottom:8px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:#176f4d}
+.vision-box-inner p{margin:0;font-size:22px;line-height:1.5;color:var(--ink);font-family:Inter,Arial,Helvetica,sans-serif}
+.vision-box-inner strong{color:#0d1820}
+.opportunity-box{margin-top:18px;padding:0 0 10px}
+.opportunity-box-inner{background:linear-gradient(135deg,#fff7dc 0%,#fffaf0 45%,#f5f9ff 100%);border:1px solid rgba(168,126,38,.30);border-radius:24px;padding:30px 28px;box-shadow:0 18px 42px rgba(104,88,41,.08)}
+.opportunity-box .mini-label{color:#5c8d1a}
+.opportunity-box-inner p{margin:0;font-size:18px;line-height:1.65;color:var(--ink)}
+.business-model-box{margin-top:18px;padding:0 0 10px}
+.business-model-box-inner{background:linear-gradient(135deg,#fff8d9 0%,#fffaf3 40%,#f4f0ff 100%);border:1px solid rgba(166,133,52,.32);border-radius:24px;padding:30px 28px;box-shadow:0 18px 42px rgba(118,96,38,.08)}
+.business-model-box .mini-label{color:#7d620a}
+.business-model-box-inner ul{margin:0;padding-left:1.2em;color:var(--ink);font-size:18px;line-height:1.75}
+.business-model-box-inner li+li{margin-top:6px}
+.about-card:before{content:"";position:absolute;inset:auto -70px -120px auto;width:280px;height:280px;border:1px solid rgba(215,168,74,.28);border-radius:50%}
+.about-card h3{font-size:28px;margin:0 0 12px}.about-card p{color:#cbd4da}
+.vision{background:#fff}
+.sectors{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.sector{background:linear-gradient(135deg,var(--box-soft),#fff);border:1px solid var(--line);border-radius:18px;padding:25px;min-height:170px;transition:.3s;position:relative;overflow:hidden}
+.sector:hover{transform:translateY(-7px);box-shadow:var(--shadow);border-color:#c7b27b}
+.sector .idx{font-size:12px;color:#9a7226;font-weight:800;letter-spacing:.1em}
+.sector h3{margin:12px 0 7px;font-size:21px}.sector p{margin:0;color:var(--muted);font-size:15px}
+.network{background:linear-gradient(180deg,#eef2f4,#f8fafb)}
+.network-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.info-card{background:linear-gradient(180deg,#fff,#f7fafb);border:1px solid var(--line);border-radius:var(--radius);padding:32px;box-shadow:0 10px 30px rgba(10,20,30,.05)}
+.info-card h3{margin-top:0;font-size:25px}
+.checks{list-style:none;padding:0;margin:20px 0 0}.checks li{display:flex;gap:11px;padding:11px 0;border-bottom:1px solid #edf0f2;color:#46515a}
+.checks li:before{content:"✓";color:#9a7226;font-weight:900}
+.dark-blue-box{position:relative;display:grid;gap:18px;margin-top:18px;padding-left:10px}
+.dark-blue-box:before{content:"";position:absolute;left:16px;top:12px;bottom:12px;width:2px;background:linear-gradient(180deg,rgba(240,201,108,.0),rgba(240,201,108,.9),rgba(240,201,108,.0));box-shadow:0 0 18px rgba(240,201,108,.18)}
+.dark-blue-box-inner{position:relative;display:flex;align-items:center;gap:16px;padding:16px 18px 16px 24px;margin-left:18px;border:1px solid rgba(255,255,255,.08);border-radius:18px;background:linear-gradient(180deg,#0f1d29,#122d3d);box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 14px 28px rgba(10,17,23,.16);min-height:72px}
+.dark-blue-box-inner:before{content:"";position:absolute;left:-29px;top:50%;width:27px;height:2px;background:linear-gradient(90deg,rgba(240,201,108,.9),rgba(240,201,108,.0));transform:translateY(-50%)}
+.dark-blue-box-inner p{margin:0;color:#edf4fb;font-size:15px;line-height:1.55;font-weight:600;letter-spacing:.01em}
+.dark-blue-box-inner .bullet{position:relative;z-index:1;width:14px;height:14px;border-radius:50%;background:linear-gradient(135deg,var(--accent2),var(--accent));box-shadow:0 0 0 5px rgba(240,201,108,.12),0 0 16px rgba(240,201,108,.25);margin-top:0;flex-shrink:0}
+.outcomes{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}
+.outcome{padding:20px;background:linear-gradient(180deg,#0d1720,#182d39);color:#fff;border-radius:16px;min-height:130px}
+.outcome b{font-size:25px;color:var(--accent);display:block;margin-bottom:8px}
+.partners{background:#fff}
+.partner-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.partner{min-height:90px;border:1px solid var(--line);border-radius:16px;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;background:linear-gradient(135deg,var(--box-soft-2),#fff);font-weight:800;color:#4b555c;transition:.25s}
+.partner:hover{transform:translateY(-4px);background:#fff;box-shadow:var(--shadow)}
+.partner a{width:100%;height:100%;min-height:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;color:inherit;font-weight:800;transition:.25s;position:relative}
+.partner a:hover{color:#101820}
+.partner-logo{max-height:52px;max-width:150px;width:auto;height:auto;object-fit:contain;filter:grayscale(100%);opacity:.86;transition:.3s ease}
+.partner a:hover .partner-logo{filter:grayscale(0%);opacity:1;transform:scale(1.04)}
+.partner-name{display:block;line-height:1.3}
+.partner.external{overflow:hidden}
+.partner.external a::after{content:"↗";position:absolute;right:11px;top:9px;font-size:12px;color:#9a7226;opacity:.75}
+@media(max-width:760px){.partner a{min-height:95px;padding:13px}.partner-logo{max-width:130px;max-height:46px}}
+
+.clients{margin-top:30px;color:var(--muted)}
+.cta{padding:75px 0;background:var(--dark);color:#fff}
+.cta-box{display:flex;justify-content:space-between;align-items:center;gap:30px}
+.cta h2{font-size:clamp(32px,4vw,52px);margin:0 0 10px;line-height:1.05}.cta p{margin:0;color:#c8d0d6;max-width:720px}
+.cta-actions{display:flex;gap:12px;flex-wrap:wrap}
+.footer{background:#070d12;color:#d8dfe3;padding:60px 0 25px}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px}
+.footer h3{color:#fff;margin-top:0}.footer p,.footer li{color:#99a5ad;font-size:14px}.footer ul{list-style:none;padding:0;margin:0}.footer li{margin:8px 0}.footer a:hover{color:var(--accent2)}
+.footer-contact{display:flex;flex-direction:column;gap:8px}
+.footer-contact h4{margin:0 0 8px;color:#fff;font-size:14px;letter-spacing:.12em;text-transform:uppercase}
+.footer-contact a,.footer-contact span{color:#c8d0d6;line-height:1.7}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.10);margin-top:40px;padding-top:20px;color:#7e8a92;font-size:13px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.reveal.show{opacity:1;transform:none}
+@media(max-width:1050px){
+ .nav-cta{display:none}.nav-links{gap:0}.nav-links a{padding:9px 8px}
+ .hero-grid,.about-grid,.network-grid{grid-template-columns:1fr}.hero{min-height:auto}.hero-panel{max-width:620px}
+ .sectors{grid-template-columns:repeat(2,1fr)}.partner-grid{grid-template-columns:repeat(3,1fr)}
+ .outcomes{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}
+ .vision-box-inner,.sector,.info-card,.partner,.dark-blue-box-inner{background-blend-mode:screen}
+}
+@media(max-width:760px){
+ .container{width:min(var(--max),calc(100% - 28px))}.nav{min-height:72px}.brand strong{font-size:18px}.brand img{width:46px;height:46px}
+ .menu-btn{display:block}.nav-links{position:absolute;left:14px;right:14px;top:66px;display:none;flex-direction:column;align-items:stretch;background:#0b131a;border:1px solid rgba(255,255,255,.12);padding:10px;border-radius:16px;box-shadow:0 18px 40px rgba(0,0,0,.25)}
+ .nav-links.open{display:flex}.nav-links a{padding:12px 14px}.hero{padding:125px 0 70px}.hero h1{font-size:56px}
+ section{padding:70px 0}.sectors{grid-template-columns:1fr}.partner-grid{grid-template-columns:repeat(2,1fr)}.cta-box{flex-direction:column;align-items:flex-start}.footer-grid{grid-template-columns:1fr}
+ .vision-box-inner,.sector,.info-card,.partner{background:linear-gradient(180deg,#f8fbff,#fff)}
+ .dark-blue-box-inner{background:linear-gradient(180deg,#142b3b,#1a394d)}
+}
+@media(max-width:480px){
+ .hero h1{font-size:47px}.hero-lead{font-size:17px}.hero-panel{padding:23px}.outcomes{grid-template-columns:1fr}.partner-grid{grid-template-columns:1fr}.about-copy{font-size:16px}
+ .vision-box-inner,.sector,.info-card,.partner,.dark-blue-box-inner{border-radius:16px}
+ .sector,.info-card,.partner{padding:18px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.sector,.partner,.nav-cta,.hero-cta{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header" id="header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="GPT Engineers home">
+      <img src="gpt-logo.jpg" alt="GPT Engineers logo">
+      <strong>GPT Engineers</strong>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active" aria-current="page">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="team.html">Our Team</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+    <a class="nav-cta" href="#project">START A PROJECT <span>→</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <div class="eyebrow">ABOUT US</div>
+      <h1>GPT Consulting <span>Structural Engineers</span> and Project Managers</h1>
+      <p class="hero-lead">GPT is a recently established structural engineering and project management firm dedicated to delivering innovative and sustainable solutions for a wide range of construction projects.</p>
+      <div class="hero-actions">
+        <a class="hero-cta" href="#project">START A PROJECT →</a>
+        <a class="ghost-cta" href="#sectors">Explore Our Sectors</a>
+      </div>
+    </div>
+    <div class="hero-panel reveal">
+      <div class="number">PNG</div>
+      <h3>Professional Coverage</h3>
+      <p>GPT Consulting Engineers delivers multiple projects through joint efforts with various client engagement and partnership work with architects operating across different sectors.</p>
+    </div>
+  </div>
+</section>
+
+<section class="vision">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="kicker">Find Out About GPT Engineers</div>
+      <h2>Engineering solutions across key sectors.</h2>
+      <p>GPT Engineers delivers structural and project management solutions across key sectors in Papua New Guinea.</p>
+    </div>
+
+    <div class="vision-box reveal">
+      <div class="vision-box-inner">
+        <span class="mini-label">Vision</span>
+        <p>To become Papua New Guinea's leading locally owned structural engineering firm, delivering innovative, cost-effective, and code-compliant designs across urban, industrial, and coastal infrastructure sectors</p>
+      </div>
+    </div>
+    <div class="opportunity-box reveal">
+      <div class="opportunity-box-inner">
+        <span class="mini-label">Opportunity</span>
+        <p>Papua New Guinea's infrastructure and property development sectors are booming but quality local engineering firms are limited. Most developers rely on expensive foreign consultants who lack terrrain experience and local complaince expertise. GPT Engineers aims to fill this gap with local talent, global expertise and modern tools</p>
+      </div>
+    </div>
+    <div class="business-model-box reveal" role="textbox" aria-label="Business Model">
+      <div class="business-model-box-inner">
+        <span class="mini-label"> Business Model </span>
+        <ul>
+          <li>Competitive fixed-fee and per-m² pricing</li>
+          <li>Long-term retainer agreements with developers</li>
+          <li>Partnerships with architects, contractors, and engineers</li>
+          <li>Fee-based consulting and site inspection packages</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="network">
+  <div class="container">
+  <!-- <div class="section-head reveal">
+      <div class="kicker">DELIVERY NETWORK</div>
+      <h2>Coordinated delivery from design to site.</h2>
+      <p>GPT Engineers delivers multiple projects through joint efforts with various client engagement and partnership work with architects operating across different sectors.</p>
+    </div>
+    <div class="network-grid">
+      <article class="info-card reveal">
+        <h3>Delivery Network</h3>
+        <p> GPT Engineers delivers projects through a coordinated network of approved suppliers and technical partners operating across Papua New Guinea and in Australia.</p>
+        <h4>WHAT THIS ENABLES</h4>
+        <ul class="checks">
+          <li>Pre-qualified suppliers aligned to project specifications</li>
+          <li>Procurement coordinated with design and programme</li>
+          <li>Local and offshore sourcing to meet budget and timelines</li>
+          <li>Materials and systems checked before site delivery</li>
+        </ul>
+      </article> -->
+      <article class="info-card reveal">
+        <h3>WHY CHOOSE GPT ENGINEERS?</h3>
+        <div class="dark-blue-box">
+          <div class="dark-blue-box-inner">
+            <span class="bullet" aria-hidden="true"></span>
+            <p>Homegrown firm solving local challenges</p>
+          </div>
+          <div class="dark-blue-box-inner">
+            <span class="bullet" aria-hidden="true"></span>
+            <p>High demand, average competition</p>
+          </div>
+          <div class="dark-blue-box-inner">
+            <span class="bullet" aria-hidden="true"></span>
+            <p>Scalable across PNG's fastest-growing cities</p>
+          </div>
+          <div class="dark-blue-box-inner">
+            <span class="bullet" aria-hidden="true"></span>
+            <p>Committed to developing local engineering capacity</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="partners">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="kicker">CLIENT & PARTNER NETWORK</div>
+      <h2>Experience across a broad project ecosystem.</h2>
+    </div>
+    <div class="partner-grid">
+      <div class="partner external reveal"><a href="https://yellowpages.com.pg/listings/architects/pt-moresby/lucky-manoka-architects-ltd/" target="_blank" rel="noopener noreferrer" aria-label="Lucky Manoka Architects Ltd - Yellow Pages PNG"><span class="partner-name">Lucky Manoka Architects Ltd</span></a></div>
+      <div class="partner external reveal">
+        <a href="https://www.tulait.com.pg/services/architecture" target="_blank" rel="noopener noreferrer" aria-label="Tulait Architecture" style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; height:100%;">
+          <img src="Tuliat---logo.jpg" alt="Tulait Architecture Logo" style="display:block; width:100%; max-width:180px; max-height:68px; height:auto; margin:0 auto 0.5rem; object-fit:contain; background:#fff; border-radius:8px; padding:6px; box-sizing:border-box;">
+          <span class="partner-name">Tulait Architecture</span>
+        </a>
+      </div>
+      <div class="partner external reveal">
+        <a href="https://seladi85.com/" target="_blank" rel="noopener noreferrer" aria-label="Seladi85" style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; height:100%;">
+          <img src="Seladi-85 Architecture Limited Final-Logo.png" alt="Seladi85 Logo" style="display:block; width:100%; max-width:180px; max-height:68px; height:auto; margin:0 auto 0.5rem; object-fit:contain; background:#fff; border-radius:8px; padding:6px; box-sizing:border-box;">
+          <span class="partner-name">Seladi85</span>
+        </a>
+      </div>
+      <div class="partner external reveal">
+        <a href="https://www.linkedin.com/company/360-degrees-engineering-services/home/" target="_blank" rel="noopener noreferrer" aria-label="360 Degrees Engineering Services" style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; height:100%;">
+          <img src="kingsmen_electrical_services_logo.jpg" alt="360 Degrees Engineering Services Logo" style="display:block; max-width:100%; max-height:64px; width:auto; height:auto; margin:0 auto 0.5rem; object-fit:contain;">
+          <span class="partner-name">360 Degrees Engineering Services</span>
+        </a>
+      </div>
+      <div class="partner external reveal"><a href="#" data-partner="Journey Architects" aria-label="Journey Architects, Port Moresby"><span class="partner-name">Journey Architects<br><small>(Port Moresby)</small></span></a></div>
+      <div class="partner external reveal"><a href="#" data-partner="Speedy Procurement Ltd" aria-label="Speedy Procurement Ltd, Port Moresby"><span class="partner-name">Speedy Procurement Ltd<br><small>(Port Moresby)</small></span></a></div>
+      <div class="partner external reveal">
+        <a href="https://www.larkinpng.com/" target="_blank" rel="noopener noreferrer" aria-label="Larkin Enterprise" style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; height:100%;">
+          <img src="Larkin Enterprise logo.png" alt="Larkin Enterprise Logo" style="display:block; width:100%; max-width:180px; max-height:68px; height:auto; margin:0 auto 0.5rem; object-fit:contain; background:#fff; border-radius:8px; padding:6px; box-sizing:border-box;">
+          <span class="partner-name">Larkin Enterprise</span>
+        </a>
+      </div>
+      <div class="partner external reveal">
+        <a href="https://alliedarchitect.com/" target="_blank" rel="noopener noreferrer" aria-label="Allied Architect" style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; height:100%;">
+          <img src="Allied Architect logo.png" alt="Allied Architect Logo" style="display:block; width:100%; max-width:180px; max-height:68px; height:auto; margin:0 auto 0.5rem; object-fit:contain; background:#fff; border-radius:8px; padding:6px; box-sizing:border-box;">
+          <span class="partner-name">Allied Architect</span>
+        </a>
+      </div>
+    </div>
+    <p class="clients">Clients also include BSP, XYZ Construction (PNG) Limited, National Department of Education, and public and private developers.</p>
+  </div>
+</section>
+
+<section class="cta" id="project">
+  <div class="container cta-box">
+    <div>
+      <h2>READY TO BUILD SOMETHING THAT BELONGS?</h2>
+      <p>Share your project enquiries by submitting a project brief, and our team will get back to you within 48 hours business days</p>
+    </div>
+    <div class="cta-actions">
+      <a class="hero-cta" href="contact.html">SUBMIT PROJECT BRIEF →</a>
+      <a class="ghost-cta" href="contact.html">CONTACT US</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+         <a class="brand" href="index.html"><img src="gpt-logo.jpg" alt="GPT Engineers logo"><span class="brand-name">GPT Engineers</span></a>
+        <p>A Papua New Guinea locally owned structural engineering firm delivering residential, commercial, institutional, and mixed-use projects across PNG and the Pacific.</p>
+      </div>
+      <div>
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li>
+          <li><a href="team.html">Our Team</a></li><li><a href="projects.html">Projects</a></li><li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>CONTACT</h4>
+        <a href="tel:+67571374813">+675 7137 4813</a>
+        <a href="mailto:
+enquiries@gpt-engineers.com">
+enquiries@gpt-engineers.com</a>
+  
+        <span>P.O. Box 1577, Vision City, Waigani, NCD, Papua New Guinea</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© <span id="year"></span> GPT Engineers. All rights reserved.</span>
+        <span>Structural Engineering • Project Management • Papua New Guinea</span>
+      </div>
+  </div>
+</footer>
+
+<script>
+const header=document.getElementById('header');
+const menuBtn=document.getElementById('menuBtn');
+const navLinks=document.getElementById('navLinks');
+
+window.addEventListener('scroll',()=>{
+  header.classList.toggle('scrolled',window.scrollY>20);
+},{passive:true});
+
+menuBtn.addEventListener('click',()=>{
+  const open=navLinks.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded',String(open));
+  menuBtn.setAttribute('aria-label',open?'Close menu':'Open menu');
+});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  navLinks.classList.remove('open');
+  menuBtn.setAttribute('aria-expanded','false');
+  menuBtn.setAttribute('aria-label','Open menu');
+}));
+
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target);
+    }
+  });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+
+document.querySelectorAll('[data-partner]').forEach(link=>{
+  link.addEventListener('click',event=>{
+    event.preventDefault();
+    const name=link.getAttribute('data-partner');
+    alert(name + ' — partner listing link to be added when the official website URL is available.');
+  });
+});
+
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
