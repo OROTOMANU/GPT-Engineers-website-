@@ -301,7 +301,8 @@
     .footer-links{display:grid;gap:10px}
     .footer-links a{color:rgba(255,255,255,.68);font-size:.9rem}
     .footer-links a:hover{color:#fff}
-    .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;display:flex;justify-content:space-between;gap:20px;color:rgba(255,255,255,.42);font-size:.78rem}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.2);padding:22px 12px 0;display:grid;justify-items:center;gap:8px;color:rgba(255,255,255,.68);font-size:.78rem;text-align:center}
+    .footer-bottom > span{display:block;max-width:100%;min-width:0;overflow-wrap:anywhere}
 
     /* REVEAL */
     .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
@@ -340,8 +341,8 @@
       .cta .btn{margin-top:25px}
       .footer-grid{grid-template-columns:1fr 1fr;gap:34px}
       .footer-brand{grid-column:1/-1}
-      .footer-bottom{display:block}
-      .footer-bottom span{display:block;margin-top:6px}
+      .footer-bottom{display:grid;justify-items:center;gap:8px}
+      .footer-bottom > span{display:block;margin-top:0}
     }
 
     @media (prefers-reduced-motion:reduce){
@@ -572,7 +573,7 @@
     .footer-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
     .footer-grid > *,
     .footer-bottom > *{min-width:0;overflow-wrap:anywhere}
-    .footer-bottom{align-items:flex-start}
+    .footer-bottom{align-items:center;text-align:center}
 
     @media (max-width:1050px){
       .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 20px}
@@ -583,8 +584,8 @@
       footer{padding:52px 0 22px}
       .footer-grid{grid-template-columns:minmax(0,1fr);gap:24px;padding-bottom:36px}
       .footer-brand{grid-column:auto}
-      .footer-bottom{display:flex;flex-direction:column;gap:8px;padding-top:18px}
-      .footer-bottom span{margin-top:0}
+      .footer-bottom{display:grid;justify-items:center;gap:8px;padding:18px 12px 0}
+      .footer-bottom > span{margin-top:0}
     }
 
     /* Keep the mobile menu clearly visible over the home hero and prevent
@@ -4091,8 +4092,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <div><div class="footer-title">Start a Project</div><div class="footer-links"><a href="mailto:enquiries@gptengineers.com.pg?subject=Project%20Brief%20Submission">Submit Project Brief</a><a href="GPT Engineers Business Profile 09092026.pdf" target="_blank" rel="noopener" download>Download GPT Engineers Business Profile</a></div></div>
       </div>
       <div class="footer-bottom">
-        <span>© <span id="year"></span> GPT Engineers. All rights reserved.</span>
-        <span>Structural Engineering • Project Management • Papua New Guinea</span>
+        <span><strong>© <span id="year">2026</span> GPT Engineers. All rights reserved.</strong></span>
+        <span><strong>Structural Engineering • Project Management • Papua New Guinea</strong></span>
       </div>
     </div>
   </footer>
